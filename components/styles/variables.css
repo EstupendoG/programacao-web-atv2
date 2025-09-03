@@ -1,0 +1,13 @@
+:root {
+    --color1: #ed7aa8;
+}
+
+    :root[data-theme="light"] {
+        --bgColor:#f9d3e3;
+        --txtColor:#291e1c; 
+    }
+
+    :root[data-theme="light"] {
+        --bgColor:#291e1c; 
+        --txtColor:#f9d3e3;
+    }

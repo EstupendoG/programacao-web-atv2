@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css
+">
+    <title>ToDo List</title>
+</head>
+<body class="p-5">
+    <header id="header" class="container sm">
+        <h1 class="page-title">Lista de Tarefas</h1>
+        <p class="page-description">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur recusandae id quos doloribus accusantium, sequi obcaecati optio quis nostrum? Est?
+        </p>
+    </header>
+
+    <div id="cards-container" class="container-sm">
+        <section class="card">
+            <form action="">
+                <label for="task_nome">Nome da Tarefa</label>
+                <input type="text" id="task_nome">
+
+                <label for="task_categoria">Categoria</label>
+                <select name="" id="task_categoria">
+                    <option value="estudo">Estudo</option>
+                    <option value="trabalho">Trabalho</option>
+                    <option value="pessoal">Pessoal</option>
+                </select>
+
+                <label for="task_prioridade">Categoria</label>
+                <select name="" id="task_prioridade">
+                    <option value="alta">Alta</option>
+                    <option value="media">Média</option>
+                    <option value="baixa">Baixa</option>
+                </select>
+
+                <label for="task_data">Categoria</label>
+                <input type="date" name="" id="task_data">
+            </form>
+        </section>
+
+        <section class="card p-2">
+            <div id="display-controllers">
+                
+            </div>
+
+            <table class="table table-striped" id="task_tabela">
+                <thead>
+                    <tr>
+                        <th scope="col">Feita</th>
+                        <th scope="col">Nome da Tarefa</th>
+                        <th scope="col">Categoria</th>
+                        <th scope="col">Prioridade</th>
+                        <th scope="col">Data Limite</th>
+                        <th scope="col">Excluir</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">b</th>
+                        <th>b</th>
+                        <th>b</th>
+                        <th>b</th>
+                        <th>b</th>
+                        <th>b</th>
+                    </tr>
+
+                </tbody>
+            </table>
+            
+        </section>
+    </div>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js
+"></script>
+
+</html>
