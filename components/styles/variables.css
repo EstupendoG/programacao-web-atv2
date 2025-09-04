@@ -5,7 +5,7 @@
 
 :root {
     --color1: #ed7aa8;
-    --mainFont: 'Odin-Bold' , sans-serif;
+    --mainFont: 'Odin Rounded' , sans-serif;
 }
 
     :root[data-theme="light"] {
