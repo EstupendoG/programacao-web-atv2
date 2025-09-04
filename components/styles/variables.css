@@ -4,18 +4,20 @@
 }
 
 :root {
-    --color1: #ed7aa8;
     --mainFont: 'Odin Rounded' , sans-serif;
+    --color1: #ed7aa8;
 }
 
     :root[data-theme="light"] {
         --bgColor1:#FDF2FA; 
         --bgColor2:#FCEAF8; 
-        --txtColor:#291e1c; 
+        --txtColor:#6B392C; 
     }
-
+    
     :root[data-theme="dark"] {
+        /* --color1: #F3A9C3; */
+        /* --txtColor:#FCEAF8; */
         --bgColor1:#291e1c; 
         --bgColor2:#3f3939; 
-        --txtColor:#FCEAF8;
+        --txtColor:#f1e2ee;
     }

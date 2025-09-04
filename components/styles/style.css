@@ -1,3 +1,12 @@
+:root[data-theme='dark']
+.border-icon{
+    filter: 
+        drop-shadow( 1px 0 var(--txtColor) )
+        drop-shadow( 0 1px var(--txtColor) )
+        drop-shadow( -1px 0 var(--txtColor) )
+        drop-shadow( 0 -1px var(--txtColor) );
+}
+
 body{
     background-color: var(--bgColor1);
     color: var(--txtColor);
@@ -34,14 +43,6 @@ body{
 
                 animation: giggle 5s infinite ease ;
             }
-                :root[data-theme='dark'] 
-                div.titles img#iconPhone {
-                    filter: 
-                        drop-shadow( 1px 0 var(--txtColor) )
-                        drop-shadow( 0 1px var(--txtColor) )
-                        drop-shadow( -1px 0 var(--txtColor) )
-                        drop-shadow( 0 -1px var(--txtColor) );
-                }
 
         label.theme-input {
             background-color: var(--bgColor2);
@@ -54,7 +55,7 @@ body{
             align-items: center;
             gap: 10px;
 
-            border: 2px solid var(--txtColor);
+            border: 1px solid var(--txtColor);
             border-radius: 50px;
 
             overflow: hidden;
@@ -90,11 +91,6 @@ body{
 
             .theme-input img.icon {
                 height: 100%;
-                filter: 
-                    drop-shadow( 1px 0 var(--txtColor) )
-                    drop-shadow( 0 1px var(--txtColor) )
-                    drop-shadow( -1px 0 var(--txtColor) )
-                    drop-shadow( 0 -1px var(--txtColor) );
             }
             
         .page-description {
