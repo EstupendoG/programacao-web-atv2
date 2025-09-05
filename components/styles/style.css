@@ -10,6 +10,8 @@
 body{
     background-color: var(--bgColor1);
     color: var(--txtColor);
+    height: 200vh;
+    position: relative;
 }
 
     #header section {
@@ -97,7 +99,95 @@ body{
             font-size: 1.1em;
         }
 
+    div#cards-container{
+        display: grid;
+        grid-template-columns: 2fr 5fr;
+        gap: 30px;
+        position: relative;
+    }
 
+        section.card{
+            padding: 20px;
+            background-color: var(--bgColor2);
+            border: none;
+            border-radius: 25px;
+        }
+
+            section#form-card{
+                position: sticky;
+                top: 0;
+                align
+            }
+
+            form.task-form{
+                background-color: transparent !important;
+                color: var(--txtColor);
+                position: sticky;
+                top: 0;
+            }
+
+                form.task-form label, 
+                form.task-form .radio-input-title {
+                    margin-bottom: 3px;
+                    font-variant: small-caps;
+                    font-size: 1em;
+                    font-family: var(--mainFont);
+                    text-align: center;
+                    width: 100%;
+                }
+                form.task-form input{
+                    background-color: var(--bgColor1);
+                    width: 100%;
+                    margin-bottom: 10px;
+                    padding: 5px 10px;
+
+                    color: var(--txtColor);
+                    font-size: .8em;
+                    font-family: var(--mainFont);
+                    border-radius: 50px;
+
+                }
+
+            section.radio-area{
+                margin-bottom: 10px;
+                display: flex;
+                gap: 3px;
+            }
+                section.radio-area input[type='radio']{
+                    display: none;
+                }
+                    section.radio-area input[type='radio'] + label{
+                        background-color: var(--bgColor1);
+                        padding: 2px;
+                        
+                        font-size: .9em;
+                        
+                        border-radius: 50px;
+                        text-indent: 0px;
+
+                        flex-grow: 1;
+
+                        cursor: pointer;
+                        transition: all 200ms, text-indent 0;
+
+                    }
+                    section.radio-area input[type='radio']:checked + label{
+                        border: 1px dotted var(--txtColor);
+                        
+                        text-align: start;
+                        text-indent: 10px;
+                    }
+
+            form.task-form button#submitBtn{
+                padding: 3px;
+                width: 100%;
+                background-color: var(--color1);
+                border-radius: 50px;
+                color: var(--txtColor);
+                font-family: var(--mainFont);
+            }
+                
+                
 
 
 
@@ -114,7 +204,6 @@ body{
         background-color: var(--bgColor2) !important;
     }
     form{
-        color: var(--txtColor);
     }
     thead th{
         background-color: var(--color1) !important;

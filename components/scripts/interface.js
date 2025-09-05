@@ -19,10 +19,10 @@ function changeTheme() {
 // =================================================== ÍCONES
 // Preset
 function recreateIconSet(name){
-    let path = `assets/emojis/${name}/${name}`
+    let pathHtml = `assets/emojis/${name}/${name}`
     let set = {
-        cellphone: `${path}-cellphone.png`,
-        smile: `${path}-smile.png`,
+        cellphone: `${pathHtml}-cellphone.png`,
+        smile: `${pathHtml}-smile.png`,
     }
 
     return set

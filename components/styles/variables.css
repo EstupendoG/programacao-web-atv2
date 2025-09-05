@@ -10,7 +10,8 @@
 
     :root[data-theme="light"] {
         --bgColor1:#FDF2FA; 
-        --bgColor2:#FCEAF8; 
+        /* --bgColor2:#FCEAF8;  */
+        --bgColor2:#f7e2f3; 
         --txtColor:#6B392C; 
     }
     

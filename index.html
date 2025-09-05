@@ -36,33 +36,39 @@
     </header>
 
     <div id="cards-container" class="container-sm">
-        <section class="card p-5">
-            <form action="">
-                <label for="task_nome">Nome da Tarefa</label>
-                <input type="text" id="task_nome">
+        <section class="card" id="form-card">
+            <form action="" class="task-form">
+                <label for="taskNome">Nome da Tarefa</label>
+                <input type="text" id="taskNome" placeholder="Nome da Tarefa" required>
 
-                <h4>Categoria</h4>
-                <input type="radio" name="task_categoria" id="estudo">
-                <label for="estudo">Estudo</label>
-                
-                <input type="radio" name="task_categoria" id="trabalho">
-                <label for="trabalho">Trabalho</label>
-                
-                <input type="radio" name="task_categoria" id="pessoal">
-                <label for="pessoal">Pessoal</label>
+                <h4 class="radio-input-title">Categoria</h4>
+                <section class="radio-area">
+                    <input type="radio" name="task_categoria" id="estudo" checked required>
+                    <label for="estudo">Estudo</label>
+    
+                    <input type="radio" name="task_categoria" id="trabalho">
+                    <label for="trabalho">Trabalho</label>
+    
+                    <input type="radio" name="task_categoria" id="pessoal">
+                    <label for="pessoal">Pessoal</label>
+                </section>
 
-                <h4>Prioridade</h4>
-                <input type="radio" name="task_prioridade" id="alta">
-                <label for="alta">Alta</label>
-                
-                <input type="radio" name="task_prioridade" id="media">
-                <label for="media">Média</label>
-                
-                <input type="radio" name="task_prioridade" id="baixa">
-                <label for="baixa">Baixa</label>
+                <h4 class="radio-input-title">Prioridade</h4>
+                <section class="radio-area">
+                    <input type="radio" name="task_prioridade" id="alta" checked required>
+                    <label for="alta">Alta</label>
+                    
+                    <input type="radio" name="task_prioridade" id="media">
+                    <label for="media">Média</label>
+                    
+                    <input type="radio" name="task_prioridade" id="baixa">
+                    <label for="baixa">Baixa</label>
+                </section>
 
-                <label for="task_data">Data de Conclusão</label>
-                <input type="date" name="" id="task_data">
+                <label for="taskDate">Data de Conclusão</label>
+                <input type="date" name="" id="taskDate" required>
+
+                <button type="submit" id="submitBtn">Criar Tarefa</button>
             </form>
         </section>
 
@@ -71,7 +77,7 @@
                 
             </div>
 
-            <table class="table" id="task_tabela">
+            <table class="table table-sm table-borderless" id="task_tabela">
                 <thead>
                     <tr>
                         <th scope="col">Feita</th>
