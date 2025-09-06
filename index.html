@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="components/styles/reset.css">
     <link rel="stylesheet" href="components/styles/variables.css">
     <link rel="stylesheet" href="components/styles/style.css">
+    <link rel="stylesheet" href="components/styles/formModal.css">
     <title>ToDo List</title>
 </head>
 
@@ -17,8 +18,8 @@
         <section class="d-flex justify-content-between align-items-center"> 
 
             <div class="titles d-flex align-items-center">
-                <h1 class="page-title">
-                    <span id="titleSymbol">#</span> 
+                <h1 class="page-title outlined-title">
+                    <span class="titleSymbol">#</span> 
                     Lista de Tarefas
                 </h1>
                 <img src="assets/emojis/kuromi/kuromi-cellphone.png" alt="" id="iconPhone" class="border-icon">
@@ -36,43 +37,12 @@
     </header>
 
     <div id="cards-container" class="container-sm">
-        <section class="card" id="form-card">
-            <form action="" class="task-form">
-                <label for="taskNome">Nome da Tarefa</label>
-                <input type="text" id="taskNome" placeholder="Nome da Tarefa" required>
-
-                <h4 class="radio-input-title">Categoria</h4>
-                <section class="radio-area">
-                    <input type="radio" name="task_categoria" id="estudo" checked required>
-                    <label for="estudo">Estudo</label>
-    
-                    <input type="radio" name="task_categoria" id="trabalho">
-                    <label for="trabalho">Trabalho</label>
-    
-                    <input type="radio" name="task_categoria" id="pessoal">
-                    <label for="pessoal">Pessoal</label>
-                </section>
-
-                <h4 class="radio-input-title">Prioridade</h4>
-                <section class="radio-area">
-                    <input type="radio" name="task_prioridade" id="alta" checked required>
-                    <label for="alta">Alta</label>
-                    
-                    <input type="radio" name="task_prioridade" id="media">
-                    <label for="media">Média</label>
-                    
-                    <input type="radio" name="task_prioridade" id="baixa">
-                    <label for="baixa">Baixa</label>
-                </section>
-
-                <label for="taskDate">Data de Conclusão</label>
-                <input type="date" name="" id="taskDate" required>
-
-                <button type="submit" id="submitBtn">Criar Tarefa</button>
-            </form>
-        </section>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Launch demo modal
+        </button>
 
         <section class="mt-3">
+
             <div id="display-controllers">
                 
             </div>
@@ -102,6 +72,81 @@
             </table>
             
         </section>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title outlined-title" id="exampleModalLabel">
+                    <span class="titleSymbol">#</span> 
+                    Adicionar Tarefa
+                </h1>
+                <img src="assets/emojis/kuromi/kuromi-thinking.png" alt="" id="iconThinking" class="form-title-icon border-icon">
+            </div>
+            <div class="modal-body">               
+                <form action="" class="task-form">
+                    <label for="taskNome">Nome da Tarefa</label>
+                    <input type="text" id="taskNome" placeholder="Nome da Tarefa" required>
+
+                    <h4 class="radio-input-title">Categoria</h4>
+                    <section class="radio-area">
+                        <input type="radio" name="task_categoria" id="estudo" checked required>
+                        <label for="estudo">
+                            Estudo
+                            <img src="assets/emojis/kuromi/kuromi-checked.png" alt="" class="checkedIcon border-icon">
+                        </label>
+        
+                        <input type="radio" name="task_categoria" id="trabalho">
+                        <label for="trabalho">
+                            Trabalho
+                            <img src="assets/emojis/kuromi/kuromi-checked.png" alt="" class="checkedIcon border-icon">
+                        </label>
+        
+                        <input type="radio" name="task_categoria" id="pessoal">
+                        <label for="pessoal">
+                            Pessoal
+                            <img src="assets/emojis/kuromi/kuromi-checked.png" alt="" class="checkedIcon border-icon">
+                        </label>
+                    </section>
+
+                    <h4 class="radio-input-title">Prioridade</h4>
+                    <section class="radio-area">
+                        <input type="radio" name="task_prioridade" id="alta" checked required>
+                        <label for="alta">
+                            Alta
+                            <img src="assets/emojis/kuromi/kuromi-checked.png" alt="" class="checkedIcon border-icon">
+                        </label>
+                        
+                        <input type="radio" name="task_prioridade" id="media">
+                        <label for="media">
+                            Média
+                            <img src="assets/emojis/kuromi/kuromi-checked.png" alt="" class="checkedIcon border-icon">
+                        </label>
+                        
+                        <input type="radio" name="task_prioridade" id="baixa">
+                        <label for="baixa">
+                            Baixa
+                            <img src="assets/emojis/kuromi/kuromi-checked.png" alt="" class="checkedIcon border-icon">
+                        </label>
+                    </section>
+
+                    <label for="taskDate">Data de Conclusão</label>
+                    <input type="date" name="" id="taskDate" required>
+
+                    <button type="submit" id="submitBtn">Criar Tarefa</button>
+                </form>
+            </div>
+        </div>
     </div>
 </body>
 

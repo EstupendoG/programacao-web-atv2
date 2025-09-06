@@ -23,6 +23,8 @@ function recreateIconSet(name){
     let set = {
         cellphone: `${pathHtml}-cellphone.png`,
         smile: `${pathHtml}-smile.png`,
+        thinking: `${pathHtml}-thinking.png`,
+        checked: `${pathHtml}-checked.png`,
     }
 
     return set
@@ -49,10 +51,18 @@ function changeIconsSet(t){
 // Aplicando
 function applyIcons(){
     // Simbolo do Título # / @
-    document.querySelector('#titleSymbol').innerHTML = iconSet.symbol
+    document.querySelectorAll('.titleSymbol').forEach(e => {
+        e.innerHTML = iconSet.symbol
+    });
     // Ícone de Telefone
     document.querySelector('#iconPhone').src = iconSet.cellphone
     // Ícone da Seleção de Tema
     document.querySelector('#iconSmile').src = iconSet.smile
+    // Ícone do Modal de Formulário
+    document.querySelector('#iconThinking').src = iconSet.thinking
+    // Ícone de Radio Selecionado
+    document.querySelectorAll('.checkedIcon').forEach(e => {
+        e.src = iconSet.checked
+    });
 
 }

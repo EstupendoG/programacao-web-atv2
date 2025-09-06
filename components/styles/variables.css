@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Racing+Sans+One&display=swap');
 @font-face {
     font-family: 'Odin Rounded';
     src: url('../../assets/fonts/Hello-Kitty-Font/Odin\ Rounded\ -\ Bold.otf');
@@ -5,18 +6,19 @@
 
 :root {
     --mainFont: 'Odin Rounded' , sans-serif;
-    --color1: #ed7aa8;
+    --txtFont: 'Montserrat', sans-serif;
 }
 
     :root[data-theme="light"] {
-        --bgColor1:#FDF2FA; 
+        --color1: #ed7aa8;
+        --bgColor1:#fcf0f9; 
         /* --bgColor2:#FCEAF8;  */
-        --bgColor2:#f7e2f3; 
+        --bgColor2:#f1d6ec; 
         --txtColor:#6B392C; 
     }
     
     :root[data-theme="dark"] {
-        /* --color1: #F3A9C3; */
+        --color1: #e96698;
         /* --txtColor:#FCEAF8; */
         --bgColor1:#291e1c; 
         --bgColor2:#3f3939; 
