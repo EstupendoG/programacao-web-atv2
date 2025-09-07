@@ -18,6 +18,16 @@
         0 -2px var(--txtColor);
 }
 
+:root[data-theme="light"]
+.filter-on-hover:hover{
+    filter: saturate(1.25);
+}
+
+:root[data-theme="dark"]
+.filter-on-hover:hover{
+    filter: brightness(1.2);
+}
+
 body{
     background-color: var(--bgColor1);
     color: var(--txtColor);
@@ -48,7 +58,7 @@ body{
                 height: 50px;
                 margin-left: 10px;
 
-                animation: giggle 5s infinite ease ;
+                animation: giggle-wide 5s infinite ease ;
             }
 
         label.theme-input {
@@ -77,14 +87,14 @@ body{
 
                 font-size: .8em;
                 font-family: var(--mainFont);
-                text-transform: uppercase;
                 vertical-align: middle;
+                text-transform: uppercase;
             
             }
             label.theme-input:hover {
                 width: 150px;
                 padding-right: 10px;
-                padding-left: 10px;
+                padding-left: 10px;                
 
                 scale: 1.05;
             }
@@ -104,19 +114,95 @@ body{
             font-size: 1.1em;
         }
 
-    div#cards-container{
-        display: grid;
-        grid-template-columns: 2fr 5fr;
-        gap: 30px;
-        position: relative;
+    main#main-container{
+
     }
 
-        section.card{
-            padding: 20px;
-            background-color: var(--bgColor2);
-            border: none;
-            border-radius: 25px;
+        div#display-controllers {
+            margin-bottom: 10px;
+
         }
+
+            div.filter-container {
+
+            }
+
+                div.filter-area {
+                    display: flex;
+                    gap: 5px;
+                    align-items: center;
+
+                }
+                    div.filter-area > label{
+                        font-size: 1.15em;
+                        text-wrap: nowrap;
+                        font-family: var(--mainFont);
+                        font-variant: small-caps;
+                    }
+                    div.filter-area > select {
+                        background-color: var(--bgColor2);
+                        width: 100%;
+                        padding: 3px 10px;
+                        
+                        color: var(--txtColor);
+                        font-size: .85em;
+                        
+                        border: none;
+                        border-radius: 5px;
+                        cursor: pointer;
+
+                        transition: all 200ms ease-out;
+                    }
+                        div.filter-area > select:hover {
+                            outline: none;
+                            border: none;
+                        }
+                        div.filter-area > select:focus {
+                            outline: 1px solid var(--txtColor);
+                        }
+
+            button.add-task-btn {
+                background-color: var(--bgColor2);
+
+                color: var(--txtColor);
+                font-size: 1.5em;
+                height: min-content;
+                padding: 0 6px;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+                border: 1px solid var(--txtColor);
+                border-radius: 50px;
+
+                overflow: hidden;
+                white-space: nowrap;
+
+                transition: all 300ms ease-out;
+            }
+                button.add-task-btn:hover {
+                }
+                button.add-task-btn::after {
+                    content: 'Adicionar Tarefa';
+                    max-width: 0px;
+
+                    font-size: .8rem;
+                    font-family: var(--mainFont);
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    
+                    opacity: 0;
+                    overflow: hidden;
+
+                    transition: all 300ms ease-out;
+                }
+                    button.add-task-btn:hover::after {
+                        max-width: 200px;
+                        padding: 0 2px;
+
+                        opacity: 1;
+                    }
 
             
 
@@ -142,12 +228,3 @@ body{
     th{
         color: var(--txtColor) !important;
     }
-
-@keyframes giggle {
-    from, to{
-        transform: rotate(-20deg);
-    }
-    50%{
-        transform: rotate(20deg);
-    }
-}

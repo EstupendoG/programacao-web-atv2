@@ -14,3 +14,16 @@ input, button{
     outline: none;
     border: none;
 }
+
+:root[data-theme='dark']
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}

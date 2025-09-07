@@ -11,9 +11,8 @@
 
     :root[data-theme="light"] {
         --color1: #ed7aa8;
-        --bgColor1:#fcf0f9; 
-        /* --bgColor2:#FCEAF8;  */
-        --bgColor2:#f1d6ec; 
+        --bgColor1:#f5e5f1; 
+        --bgColor2:#eecfe8; 
         --txtColor:#6B392C; 
     }
     
