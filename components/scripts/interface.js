@@ -21,6 +21,7 @@ function changeTheme() {
 function recreateIconSet(name){
     let pathHtml = `assets/emojis/${name}/${name}`
     let set = {
+        favIcon: `assets/img/${name}Icon.ico`,
         cellphone: `${pathHtml}-cellphone.png`,
         smile: `${pathHtml}-smile.png`,
         thinking: `${pathHtml}-thinking.png`,
@@ -64,5 +65,18 @@ function applyIcons(){
     document.querySelectorAll('.checkedIcon').forEach(e => {
         e.src = iconSet.checked
     });
+
+    
+    // Mudando o FavIcon da Página
+    var link = document.createElement('link'),
+        oldLink = document.getElementById('dynamic-favicon');
+    link.id = 'dynamic-favicon';
+    link.rel = 'shortcut icon';
+    link.href = iconSet.favIcon;
+    if (oldLink) {
+    document.head.removeChild(oldLink);
+    }
+    document.head.appendChild(link);
+
 
 }

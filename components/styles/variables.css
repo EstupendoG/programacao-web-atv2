@@ -10,16 +10,16 @@
 }
 
     :root[data-theme="light"] {
-        --color1: #ed7aa8;
-        --bgColor1:#f5e5f1; 
-        --bgColor2:#eecfe8; 
-        --txtColor:#6B392C; 
+        --color1: 237, 122, 168;
+        --bgColor1:245, 229, 241; 
+        --bgColor2:238, 207, 232; 
+        --txtColor:107, 57, 44; 
     }
     
     :root[data-theme="dark"] {
-        --color1: #e96698;
+        --color1: 233, 102, 152;
         /* --txtColor:#FCEAF8; */
-        --bgColor1:#291e1c; 
-        --bgColor2:#3f3939; 
-        --txtColor:#f1e2ee;
+        --bgColor1:41, 30, 28; 
+        --bgColor2:63, 57, 57; 
+        --txtColor:241, 226, 238;
     }

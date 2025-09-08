@@ -1,5 +1,5 @@
 div.modal-content{
-    background-color: var(--bgColor1);
+    background-color: rgb(var(--bgColor1));
     border-radius: 50px;
     padding: 35px;
 }
@@ -9,7 +9,7 @@ div.modal-header {
     margin-bottom: 20px;
     padding: 0;
 
-    color: var(--color1);
+    color: rgb(var(--color1));
     font-family: var(--mainFont);
     text-transform: uppercase;
 
@@ -44,7 +44,7 @@ section#form-card{
 
     form.task-form{
         background-color: transparent !important;
-        color: var(--txtColor);
+        color: rgb(var(--txtColor));
         position: sticky;
         top: 0;
     }
@@ -59,17 +59,17 @@ section#form-card{
             font-variant: small-caps;
         }
         form.task-form input{
-            background-color: var(--bgColor2);
+            background-color: rgb(var(--bgColor2));
             width: 100%;
             margin-bottom: 10px;
             padding: 5px 10px;
 
-            color: var(--txtColor);
+            color: rgb(var(--txtColor));
             font-size: .9em;
             border-radius: 50px;
         }
             form.task-form input:focus{
-                outline: 1px solid var(--txtColor);
+                outline: 1px solid rgb(var(--txtColor));
             }
 
     section.radio-area{
@@ -81,7 +81,7 @@ section#form-card{
             display: none;
         }
             section.radio-area input[type='radio'] + label{
-                background-color: var(--bgColor2);
+                background-color: rgb(var(--bgColor2));
                 padding: 5px;
                 
                 font-size: .85em;
@@ -99,10 +99,10 @@ section#form-card{
                 transition: all 200ms ease-out;
             }
                 section.radio-area input[type='radio'] + label:hover{
-                    outline: 1px dashed var(--txtColor);
+                    outline: 1px dashed rgb(var(--txtColor));
                 }
             section.radio-area input[type='radio']:checked + label{
-                outline: 1px solid var(--txtColor);
+                outline: 1px solid rgb(var(--txtColor));
                 scale: 1.05;
                 
                 position: relative;
@@ -124,14 +124,14 @@ section#form-card{
                 }
 
     form.task-form button#submitBtn{
-        background-color: var(--color1);
+        background-color: rgb(var(--color1));
         width: 100%;
         margin-top: 20px;
         padding: 5px;
 
         border-radius: 50px;
         
-        color: var(--txtColor);
+        color: rgb(var(--txtColor));
         font-size: 1em;
         font-family: var(--mainFont);
         text-transform: uppercase;
@@ -139,7 +139,7 @@ section#form-card{
         transition: all 250ms;
     }
         form.task-form button#submitBtn:hover{
-            border: 1px solid var(--txtColor);
+            border: 1px solid rgb(var(--txtColor));
             scale: 1.05;
         }
         

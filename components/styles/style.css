@@ -1,21 +1,21 @@
 :root[data-theme='dark']
 .border-icon{
     filter: 
-        drop-shadow( 1px 0 var(--txtColor) )
-        drop-shadow( 0 1px var(--txtColor) )
-        drop-shadow( -1px 0 var(--txtColor) )
-        drop-shadow( 0 -1px var(--txtColor) );
+        drop-shadow( 1px 0 rgb(var(--txtColor)) )
+        drop-shadow( 0 1px rgb(var(--txtColor)) )
+        drop-shadow( -1px 0 rgb(var(--txtColor)) )
+        drop-shadow( 0 -1px rgb(var(--txtColor)) );
 }
 
 .outlined-title{
     font-family: var(--mainFont);
     text-transform: uppercase;
-    color: var(--color1);
+    color: rgb(var(--color1));
     text-shadow: 
-        2px 0 var(--txtColor),
-        0 2px var(--txtColor),
-        -2px 0 var(--txtColor),
-        0 -2px var(--txtColor);
+        2px 0 rgb(var(--txtColor)),
+        0 2px rgb(var(--txtColor)),
+        -2px 0 rgb(var(--txtColor)),
+        0 -2px rgb(var(--txtColor));
 }
 
 :root[data-theme="light"]
@@ -29,8 +29,8 @@
 }
 
 body{
-    background-color: var(--bgColor1);
-    color: var(--txtColor);
+    background-color: rgb(var(--bgColor1));
+    color: rgb(var(--txtColor));
     height: 200vh;
     position: relative;
 
@@ -45,12 +45,12 @@ body{
         }
 
             div.titles span#titleSymbol {
-                color: var(--color1);
+                color: rgb(var(--color1));
                 text-shadow: 
-                    2px 0 var(--txtColor),
-                    0 2px var(--txtColor),
-                    -2px 0 var(--txtColor),
-                    0 -2px var(--txtColor);
+                    2px 0 rgb(var(--txtColor)),
+                    0 2px rgb(var(--txtColor)),
+                    -2px 0 rgb(var(--txtColor)),
+                    0 -2px rgb(var(--txtColor));
             }
             div.titles .page-title {
             }
@@ -62,7 +62,7 @@ body{
             }
 
         label.theme-input {
-            background-color: var(--bgColor2);
+            background-color: rgb(var(--bgColor2));
             width: 50px;
             height: 50px;
             min-height: 100%;
@@ -72,7 +72,7 @@ body{
             align-items: center;
             gap: 10px;
 
-            border: 1px solid var(--txtColor);
+            border: 1px solid rgb(var(--txtColor));
             border-radius: 50px;
 
             overflow: hidden;
@@ -140,11 +140,11 @@ body{
                         font-variant: small-caps;
                     }
                     div.filter-area > select {
-                        background-color: var(--bgColor2);
+                        background-color: rgb(var(--bgColor2));
                         width: 100%;
                         padding: 3px 10px;
                         
-                        color: var(--txtColor);
+                        color: rgb(var(--txtColor));
                         font-size: .85em;
                         
                         border: none;
@@ -158,13 +158,13 @@ body{
                             border: none;
                         }
                         div.filter-area > select:focus {
-                            outline: 1px solid var(--txtColor);
+                            outline: 1px solid rgb(var(--txtColor));
                         }
 
             button.add-task-btn {
-                background-color: var(--bgColor2);
+                background-color: rgb(var(--bgColor2));
 
-                color: var(--txtColor);
+                color: rgb(var(--txtColor));
                 font-size: 1.5em;
                 height: min-content;
                 padding: 0 6px;
@@ -173,7 +173,7 @@ body{
                 justify-content: center;
                 align-items: center;
                 
-                border: 1px solid var(--txtColor);
+                border: 1px solid rgb(var(--txtColor));
                 border-radius: 50px;
 
                 overflow: hidden;
@@ -209,22 +209,73 @@ body{
 
 
 
-        
-
-
-
-
-
-    table, th, tr, thead, tbody, form{
-        background-color: var(--bgColor2) !important;
+    table#taskTable{
     }
-    form{
-    }
-    thead th{
-        background-color: var(--color1) !important;
-        font-family: 'Odin Rounded';
-        color: var(--bgColor2) !important;
-    }
-    th{
-        color: var(--txtColor) !important;
-    }
+        table#taskTable tr,
+        table#taskTable th{
+            background-color: transparent;
+        }
+
+        table#taskTable > thead{
+        }
+            :root[data-theme='light']
+            table#taskTable > thead{
+                background-color: rgb(var(--color1));
+            }
+            :root[data-theme='dark']
+            table#taskTable > thead{
+                background-color: rgb(var(--bgColor2));
+            }       
+            table#taskTable > thead tr,
+            table#taskTable > thead th{
+                color: rgb(var(--txtColor));
+            }
+            table#taskTable > thead th{
+                padding: 15px 0 10px;
+                box-shadow: 0 -1px rgb(var(--txtColor));
+            }
+            table#taskTable > thead th:first-of-type{
+                border-top-left-radius: 30px;
+                text-align: center;
+                box-shadow: 
+                    -1px 0 rgb(var(--txtColor)),
+                    0px -1px rgb(var(--txtColor));
+            }
+            table#taskTable > thead th:last-of-type{
+                border-top-right-radius: 30px;
+                text-align: center;
+                box-shadow: 
+                    1px 0 rgb(var(--txtColor)),
+                    0px -1px rgb(var(--txtColor));
+            }
+
+        table#taskTable > tbody#taskBody{
+            background-repeat: repeat;
+            background-size: contain;
+        }
+            :root[data-theme='light']
+            table#taskTable > tbody#taskBody{
+                background-image: url('../../assets/img/melodyPattern.png');
+                box-shadow: inset 0 0 0 1000px rgba(var(--bgColor2), 0.5);
+            }
+            :root[data-theme='dark']
+            table#taskTable > tbody#taskBody{
+                background-image: url('../../assets/img/kuromiPattern.png');
+                box-shadow: inset 0 0 0 1000px rgba(var(--bgColor2), 0.7);
+            }
+
+            table#taskTable > tbody#taskBody tr:nth-child(even){
+                background-color: rgba(var(--bgColor2), 0.3);
+            }
+            table#taskTable > tbody#taskBody tr{
+                box-shadow: 
+                    1px 0 rgb(var(--txtColor)),
+                    -1px 0 rgb(var(--txtColor));
+            }
+            table#taskTable > tbody#taskBody tr:last-of-type{
+                box-shadow: 
+                    1px 0px rgb(var(--txtColor)),
+                    1px 1px rgb(var(--txtColor)),
+                    -1px 0 rgb(var(--txtColor)),
+                    -1px 1px rgb(var(--txtColor));
+            }
