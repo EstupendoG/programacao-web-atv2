@@ -9,6 +9,7 @@
 
 .outlined-title{
     font-family: var(--mainFont);
+    letter-spacing: 2px;
     text-transform: uppercase;
     color: rgb(var(--color1));
     text-shadow: 
@@ -210,10 +211,15 @@ body{
 
 
     table#taskTable{
+        box-shadow: 0 1px rgb(var(--txtColor));
     }
         table#taskTable tr,
         table#taskTable th{
             background-color: transparent;
+        }
+        table#taskTable th{
+            padding: 5px 15px;
+            vertical-align: middle;
         }
 
         table#taskTable > thead{
@@ -229,9 +235,14 @@ body{
             table#taskTable > thead tr,
             table#taskTable > thead th{
                 color: rgb(var(--txtColor));
+                font-family: var(--mainFont);
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                word-spacing: -3px;
             }
             table#taskTable > thead th{
-                padding: 15px 0 10px;
+                padding: 15px 15px 10px;
+                text-wrap: nowrap;
                 box-shadow: 0 -1px rgb(var(--txtColor));
             }
             table#taskTable > thead th:first-of-type{
@@ -251,7 +262,7 @@ body{
 
         table#taskTable > tbody#taskBody{
             background-repeat: repeat;
-            background-size: contain;
+            background-size: 10%;
         }
             :root[data-theme='light']
             table#taskTable > tbody#taskBody{
@@ -264,18 +275,65 @@ body{
                 box-shadow: inset 0 0 0 1000px rgba(var(--bgColor2), 0.7);
             }
 
-            table#taskTable > tbody#taskBody tr:nth-child(even){
-                background-color: rgba(var(--bgColor2), 0.3);
-            }
             table#taskTable > tbody#taskBody tr{
                 box-shadow: 
                     1px 0 rgb(var(--txtColor)),
                     -1px 0 rgb(var(--txtColor));
             }
-            table#taskTable > tbody#taskBody tr:last-of-type{
-                box-shadow: 
-                    1px 0px rgb(var(--txtColor)),
-                    1px 1px rgb(var(--txtColor)),
-                    -1px 0 rgb(var(--txtColor)),
-                    -1px 1px rgb(var(--txtColor));
+                table#taskTable > tbody#taskBody tr:nth-child(even){
+                    background-color: rgba(var(--bgColor2), 0.3);
+                }
+                table#taskTable > tbody#taskBody tr th:first-of-type,
+                table#taskTable > tbody#taskBody tr th:last-of-type{
+                    text-align: center;
+                    vertical-align: middle;
+                }
+                
+                table#taskTable > tbody#taskBody tr th{
+                    color: rgb(var(--txtColor));
+                    font-weight: 400;
+                    font-size: .9em;
+                }
+                
+
+
+    table#taskTable input.task-done-input{
+        display: none;
+    }
+        table#taskTable input.task-done-input + label{
+            content: var(--uncheckedIcon);
+            width: 40px;
+
+            opacity: .5;
+            filter: saturate(0);
+
+            cursor: pointer;
+            transition: all 150ms ease-out;
+        }
+        table#taskTable input.task-done-input + label:hover{
+            scale: 1.2;
+            filter: saturate(.5);
+
+            transform: rotate(-5deg);
+        }
+        table#taskTable input.task-done-input:checked + label{
+            content: var(--checkedIcon);
+            filter: saturate(1);
+            opacity: 1;
+
+            animation: pop-up 250ms ease-in;
+        }
+
+        table#taskTable img.delete-task-btn{
+            width: 45px;
+            cursor: pointer;
+            opacity: .5;
+
+            transition: all 100ms ease-out;
+        }
+            table#taskTable img.delete-task-btn:hover{
+                scale: 1.2;
+                opacity: 1;
+                transform: rotate(5deg);
             }
+        

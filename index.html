@@ -23,12 +23,12 @@
                     <span class="titleSymbol">#</span> 
                     Lista de Tarefas
                 </h1>
-                <img src="assets/emojis/kuromi/kuromi-cellphone.png" alt="" id="iconPhone" class="border-icon">
+                <img src="" alt="" id="iconPhone" class="border-icon">
             </div>
 
             <label class="theme-input filter-on-hover" for="changeTheme">
                 <input type="checkbox" id="changeTheme" checked>
-                <img class="icon border-icon" src="assets/emojis/kuromi/kuromi-smile.png" alt="" id="iconSmile">
+                <img class="icon border-icon" src="" alt="" id="iconSmile">
             </label>
         </section>
 
@@ -77,44 +77,30 @@
             </thead>
             <tbody id="taskBody">
                 <tr>
-                    <th scope="row">b</th>
-                    <th>b</th>
-                    <th>b</th>
-                    <th>b</th>
-                    <th>b</th>
-                    <th>b</th>
+                    <th scope="row">
+                        <input type="checkbox" id="task-done-input-1" class="task-done-input"> 
+                        <label for="task-done-input-1"></label>
+                    </th>
+                    <th class="task-name">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, ullam.</th>
+                    <th class="task-category">Estudo</th>
+                    <th class="task-priority">Alta</th>
+                    <th class="task-date">12/02/2027</th>
+                    <th>
+                        <img src="assets/emojis/bubble-frustrated.png" alt="" class="delete-task-btn">
+                    </th>
                 </tr>
                 <tr>
-                    <th scope="row">b</th>
-                    <th>b</th>
-                    <th>b</th>
-                    <th>b</th>
-                    <th>b</th>
-                    <th>b</th>
-                </tr>
-                <tr>
-                    <th scope="row">b</th>
-                    <th>b</th>
-                    <th>b</th>
-                    <th>b</th>
-                    <th>b</th>
-                    <th>b</th>
-                </tr>
-                <tr>
-                    <th scope="row">b</th>
-                    <th>b</th>
-                    <th>b</th>
-                    <th>b</th>
-                    <th>b</th>
-                    <th>b</th>
-                </tr>
-                <tr>
-                    <th scope="row">b</th>
-                    <th>b</th>
-                    <th>b</th>
-                    <th>b</th>
-                    <th>b</th>
-                    <th>b</th>
+                    <th scope="row">
+                        <input type="checkbox" id="task-done-input-1" class="task-done-input"> 
+                        <label for="task-done-input-1"></label>
+                    </th>
+                    <th class="task-name">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit tempora, laborum repellat beatae minima facere!</th>
+                    <th class="task-category">Estudo</th>
+                    <th class="task-priority">Alta</th>
+                    <th class="task-date">12/02/2027</th>
+                    <th>
+                        <img src="assets/emojis/bubble-frustrated.png" alt="" class="delete-task-btn">
+                    </th>
                 </tr>
 
             </tbody>
@@ -133,65 +119,66 @@
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title outlined-title" id="exampleModalLabel">
-                    <span class="titleSymbol">#</span> 
-                    Adicionar Tarefa
-                </h1>
-                <img src="assets/emojis/kuromi/kuromi-thinking.png" alt="" id="iconThinking" class="form-title-icon border-icon">
-            </div>
-            <div class="modal-body">               
-                <form action="" class="task-form">
-                    <label for="taskNome">Nome da Tarefa</label>
-                    <input type="text" id="taskNome" placeholder="Nome da Tarefa" required>
+                <div class="modal-header">
+                    <h1 class="modal-title outlined-title" id="exampleModalLabel">
+                        <span class="titleSymbol">#</span> 
+                        Adicionar Tarefa
+                    </h1>
+                    <img src="" alt="" id="iconThinking" class="form-title-icon border-icon">
+                </div>
+                <div class="modal-body">               
+                    <form action="" class="task-form">
+                        <label for="taskNome">Nome da Tarefa</label>
+                        <input type="text" id="taskNome" placeholder="Nome da Tarefa" required>
 
-                    <h4 class="radio-input-title">Categoria</h4>
-                    <section class="radio-area">
-                        <input type="radio" name="task_categoria" id="estudo" checked required>
-                        <label for="estudo">
-                            Estudo
-                            <img src="assets/emojis/kuromi/kuromi-checked.png" alt="" class="checkedIcon border-icon">
-                        </label>
-        
-                        <input type="radio" name="task_categoria" id="trabalho">
-                        <label for="trabalho">
-                            Trabalho
-                            <img src="assets/emojis/kuromi/kuromi-checked.png" alt="" class="checkedIcon border-icon">
-                        </label>
-        
-                        <input type="radio" name="task_categoria" id="pessoal">
-                        <label for="pessoal">
-                            Pessoal
-                            <img src="assets/emojis/kuromi/kuromi-checked.png" alt="" class="checkedIcon border-icon">
-                        </label>
-                    </section>
+                        <h4 class="radio-input-title">Categoria</h4>
+                        <section class="radio-area">
+                            <input type="radio" name="task_categoria" id="estudo" checked required>
+                            <label for="estudo">
+                                Estudo
+                                <img src="" alt="" class="checkedIcon border-icon">
+                            </label>
+            
+                            <input type="radio" name="task_categoria" id="trabalho">
+                            <label for="trabalho">
+                                Trabalho
+                                <img src="" alt="" class="checkedIcon border-icon">
+                            </label>
+            
+                            <input type="radio" name="task_categoria" id="pessoal">
+                            <label for="pessoal">
+                                Pessoal
+                                <img src="" alt="" class="checkedIcon border-icon">
+                            </label>
+                        </section>
 
-                    <h4 class="radio-input-title">Prioridade</h4>
-                    <section class="radio-area">
-                        <input type="radio" name="task_prioridade" id="alta" checked required>
-                        <label for="alta">
-                            Alta
-                            <img src="assets/emojis/kuromi/kuromi-checked.png" alt="" class="checkedIcon border-icon">
-                        </label>
-                        
-                        <input type="radio" name="task_prioridade" id="media">
-                        <label for="media">
-                            Média
-                            <img src="assets/emojis/kuromi/kuromi-checked.png" alt="" class="checkedIcon border-icon">
-                        </label>
-                        
-                        <input type="radio" name="task_prioridade" id="baixa">
-                        <label for="baixa">
-                            Baixa
-                            <img src="assets/emojis/kuromi/kuromi-checked.png" alt="" class="checkedIcon border-icon">
-                        </label>
-                    </section>
+                        <h4 class="radio-input-title">Prioridade</h4>
+                        <section class="radio-area">
+                            <input type="radio" name="task_prioridade" id="alta" checked required>
+                            <label for="alta">
+                                Alta
+                                <img src="" alt="" class="checkedIcon border-icon">
+                            </label>
+                            
+                            <input type="radio" name="task_prioridade" id="media">
+                            <label for="media">
+                                Média
+                                <img src="" alt="" class="checkedIcon border-icon">
+                            </label>
+                            
+                            <input type="radio" name="task_prioridade" id="baixa">
+                            <label for="baixa">
+                                Baixa
+                                <img src="" alt="" class="checkedIcon border-icon">
+                            </label>
+                        </section>
 
-                    <label for="taskDate">Data de Conclusão</label>
-                    <input type="date" name="" id="taskDate" required>
+                        <label for="taskDate">Data de Conclusão</label>
+                        <input type="date" name="" id="taskDate" required>
 
-                    <button type="submit" id="submitBtn">Criar Tarefa</button>
-                </form>
+                        <button type="submit" id="submitBtn">Criar Tarefa</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

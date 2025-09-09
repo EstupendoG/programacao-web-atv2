@@ -1,10 +1,12 @@
 const html = document.documentElement
-
+let currentTheme = 'dark'
+document.addEventListener('DOMContentLoaded', () => {
+    changeIconsSet(currentTheme)
+})
 
 // =================================================== TEMA
 
 const iTheme = document.querySelector("#changeTheme")
-let currentTheme = 'dark'
 iTheme.addEventListener('click', changeTheme)
 
 function changeTheme() {
@@ -19,13 +21,16 @@ function changeTheme() {
 // =================================================== ÍCONES
 // Preset
 function recreateIconSet(name){
-    let pathHtml = `assets/emojis/${name}/${name}`
+    let path = `assets/emojis/${name}/${name}`
+
     let set = {
         favIcon: `assets/img/${name}Icon.ico`,
-        cellphone: `${pathHtml}-cellphone.png`,
-        smile: `${pathHtml}-smile.png`,
-        thinking: `${pathHtml}-thinking.png`,
-        checked: `${pathHtml}-checked.png`,
+        cellphone: `${path}-cellphone.png`,
+        smile: `${path}-smile.png`,
+        thinking: `${path}-thinking.png`,
+        checked: `${path}-checked.png`,
+        toDo: `${path}-sleep.png`,
+        done: `${path}-heart.png`,
     }
 
     return set
@@ -65,6 +70,10 @@ function applyIcons(){
     document.querySelectorAll('.checkedIcon').forEach(e => {
         e.src = iconSet.checked
     });
+    // Variáveis CSS do ícone ToDo
+    document.documentElement.style.setProperty('--uncheckedIcon', `url('../../${iconSet.toDo}')`)
+    // Variáveis CSS do ícone Done
+    document.documentElement.style.setProperty('--checkedIcon', `url('../../${iconSet.done}')`)
 
     
     // Mudando o FavIcon da Página
