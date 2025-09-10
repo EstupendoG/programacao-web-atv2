@@ -44,16 +44,16 @@
                 <div class="filter-area">
                     <label for="filterCategory">Categoria</label>
                     <select class="filter-on-hover" name="" id="filterCategory">
-                        <option value="">Estudo</option>
-                        <option value="">Trabalho</option>
-                        <option value="">Pessoal</option>
+                        <option value="estudo">Estudo</option>
+                        <option value="trabalho">Trabalho</option>
+                        <option value="pessoal">Pessoal</option>
                     </select>
                 </div>
                 <div class="filter-area">
                     <label for="filterSort">Ordenar Por</label>
                     <select class="filter-on-hover" name="" id="filterSort">
-                        <option value="">Prioridade</option>
-                        <option value="">Data de Conclusão</option>
+                        <option value="prioridade">Prioridade</option>
+                        <option value="data">Data de Conclusão</option>
                     </select>
                 </div>
             </div>
@@ -68,40 +68,14 @@
             <thead>
                 <tr>
                     <th scope="col">Feita</th>
-                    <th scope="col">Nome da Tarefa</th>
-                    <th scope="col">Categoria</th>
-                    <th scope="col">Prioridade</th>
-                    <th scope="col">Data Limite</th>
+                    <th scope="col" class="task-name">Nome da Tarefa</th>
+                    <th scope="col" class="task-category">Categoria</th>
+                    <th scope="col" class="task-priority">Prioridade</th>
+                    <th scope="col" class="task-date">Data Limite</th>
                     <th scope="col">Excluir</th>
                 </tr>
             </thead>
             <tbody id="taskBody">
-                <tr>
-                    <th scope="row">
-                        <input type="checkbox" id="task-done-input-1" class="task-done-input"> 
-                        <label for="task-done-input-1"></label>
-                    </th>
-                    <th class="task-name">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, ullam.</th>
-                    <th class="task-category">Estudo</th>
-                    <th class="task-priority">Alta</th>
-                    <th class="task-date">12/02/2027</th>
-                    <th>
-                        <img src="assets/emojis/bubble-frustrated.png" alt="" class="delete-task-btn">
-                    </th>
-                </tr>
-                <tr>
-                    <th scope="row">
-                        <input type="checkbox" id="task-done-input-1" class="task-done-input"> 
-                        <label for="task-done-input-1"></label>
-                    </th>
-                    <th class="task-name">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit tempora, laborum repellat beatae minima facere!</th>
-                    <th class="task-category">Estudo</th>
-                    <th class="task-priority">Alta</th>
-                    <th class="task-date">12/02/2027</th>
-                    <th>
-                        <img src="assets/emojis/bubble-frustrated.png" alt="" class="delete-task-btn">
-                    </th>
-                </tr>
 
             </tbody>
         </table>
@@ -127,25 +101,25 @@
                     <img src="" alt="" id="iconThinking" class="form-title-icon border-icon">
                 </div>
                 <div class="modal-body">               
-                    <form action="" class="task-form">
+                    <form action="" class="task-form" id="taskForm">
                         <label for="taskNome">Nome da Tarefa</label>
                         <input type="text" id="taskNome" placeholder="Nome da Tarefa" required>
 
                         <h4 class="radio-input-title">Categoria</h4>
                         <section class="radio-area">
-                            <input type="radio" name="task_categoria" id="estudo" checked required>
+                            <input type="radio" name="task_categoria" id="estudo" value="estudo" checked required>
                             <label for="estudo">
                                 Estudo
                                 <img src="" alt="" class="checkedIcon border-icon">
                             </label>
             
-                            <input type="radio" name="task_categoria" id="trabalho">
+                            <input type="radio" name="task_categoria" id="trabalho" value="trabalho">
                             <label for="trabalho">
                                 Trabalho
                                 <img src="" alt="" class="checkedIcon border-icon">
                             </label>
             
-                            <input type="radio" name="task_categoria" id="pessoal">
+                            <input type="radio" name="task_categoria" id="pessoal" value="pessoal">
                             <label for="pessoal">
                                 Pessoal
                                 <img src="" alt="" class="checkedIcon border-icon">
@@ -154,19 +128,19 @@
 
                         <h4 class="radio-input-title">Prioridade</h4>
                         <section class="radio-area">
-                            <input type="radio" name="task_prioridade" id="alta" checked required>
+                            <input type="radio" name="task_prioridade" id="alta" value="alta" checked required>
                             <label for="alta">
                                 Alta
                                 <img src="" alt="" class="checkedIcon border-icon">
                             </label>
                             
-                            <input type="radio" name="task_prioridade" id="media">
+                            <input type="radio" name="task_prioridade" id="media" value="media">
                             <label for="media">
                                 Média
                                 <img src="" alt="" class="checkedIcon border-icon">
                             </label>
                             
-                            <input type="radio" name="task_prioridade" id="baixa">
+                            <input type="radio" name="task_prioridade" id="baixa" value="baixa">
                             <label for="baixa">
                                 Baixa
                                 <img src="" alt="" class="checkedIcon border-icon">
@@ -186,5 +160,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 <script src="components/scripts/interface.js"></script>
+<script src="components/scripts/tasks.js"></script>
+<script src="components/scripts/table.js"></script>
 
 </html>

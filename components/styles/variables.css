@@ -7,6 +7,9 @@
 :root {
     --mainFont: 'Odin Rounded' , sans-serif;
     --txtFont: 'Montserrat', sans-serif;
+    --red: #e05451;
+    --yellow: #E6AE63;
+    --green: #9eb352;
 }
 
     :root[data-theme="light"] {

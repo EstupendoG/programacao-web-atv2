@@ -179,3 +179,12 @@ section#form-card{
         transform: rotate(10deg);
     }
 }
+
+@keyframes sleeping {
+    from, to {
+        scale: 1;
+    }
+    50% {
+        scale: 1.2;
+    }
+}

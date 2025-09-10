@@ -120,8 +120,8 @@ body{
     }
 
         div#display-controllers {
-            margin-bottom: 10px;
-
+            margin-bottom: 20px;
+            padding: 0 20px;
         }
 
             div.filter-container {
@@ -221,6 +221,9 @@ body{
             padding: 5px 15px;
             vertical-align: middle;
         }
+            table#taskTable th:not(.task-name){
+                text-align: center;
+            }
 
         table#taskTable > thead{
         }
@@ -258,7 +261,7 @@ body{
                 box-shadow: 
                     1px 0 rgb(var(--txtColor)),
                     0px -1px rgb(var(--txtColor));
-            }
+            } 
 
         table#taskTable > tbody#taskBody{
             background-repeat: repeat;
@@ -279,10 +282,29 @@ body{
                 box-shadow: 
                     1px 0 rgb(var(--txtColor)),
                     -1px 0 rgb(var(--txtColor));
+                
+                transition: all 250ms ease-in, background-color 0;
             }
-                table#taskTable > tbody#taskBody tr:nth-child(even){
+                 :root[data-theme='light']
+                table#taskTable > tbody#taskBody tr:nth-child(even){                    
                     background-color: rgba(var(--bgColor2), 0.3);
                 }
+                :root[data-theme='dark']
+                table#taskTable > tbody#taskBody tr:nth-child(even){
+                    background-color: rgba(var(--bgColor2), 0.5);
+                }
+                table#taskTable > tbody#taskBody tr:hover{
+                    background-color: rgba(var(--bgColor2), 0.3);
+                    outline: 1px dashed rgb(var(--txtColor), 0.5);
+                }
+                    :root[data-theme='light']
+                    table#taskTable > tbody#taskBody tr:hover{
+                        filter: brightness(1.15);
+                    }
+                    :root[data-theme='dark']
+                    table#taskTable > tbody#taskBody tr:hover{
+                        filter: brightness(.8);
+                    }
                 table#taskTable > tbody#taskBody tr th:first-of-type,
                 table#taskTable > tbody#taskBody tr th:last-of-type{
                     text-align: center;
@@ -294,6 +316,40 @@ body{
                     font-weight: 400;
                     font-size: .9em;
                 }
+                    table#taskTable > tbody#taskBody tr th.task-priority span{
+                            width: 100%;
+                            display: inline-block;
+                            border-radius: 50px;
+                            text-align: center;
+                            padding: 3px;
+                    }
+                    table#taskTable > tbody#taskBody tr th.task-name{
+                        min-width: 400px;
+                        font-weight: 500;
+                    }
+                    table#taskTable > tbody#taskBody tr th.task-category{
+                        text-transform: capitalize;
+                        font-size: .9em;
+                    }
+                    th.task-priority
+                    span{
+                        border: 1px solid rgb(var(--txtColor));
+                        text-transform: uppercase;
+                        font-family: var(--mainFont);
+                        font-size: .9em;
+                    }
+                        th.task-priority
+                        span.alta{
+                            background-color: var(--red);
+                        }
+                        th.task-priority
+                        span.media{
+                            background-color: var(--yellow);
+                        }
+                        th.task-priority
+                        span.baixa{
+                            background-color: var(--green);
+                        }
                 
 
 
@@ -309,6 +365,7 @@ body{
 
             cursor: pointer;
             transition: all 150ms ease-out;
+            animation: sleeping 10s ease-in-out infinite;
         }
         table#taskTable input.task-done-input + label:hover{
             scale: 1.2;
