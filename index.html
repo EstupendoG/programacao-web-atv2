@@ -44,6 +44,7 @@
                 <div class="filter-area">
                     <label for="filterCategory">Categoria</label>
                     <select class="filter-on-hover" name="" id="filterCategory">
+                        <option value="todos">Todos</option>
                         <option value="estudo">Estudo</option>
                         <option value="trabalho">Trabalho</option>
                         <option value="pessoal">Pessoal</option>
@@ -128,19 +129,19 @@
 
                         <h4 class="radio-input-title">Prioridade</h4>
                         <section class="radio-area">
-                            <input type="radio" name="task_prioridade" id="alta" value="alta" checked required>
+                            <input type="radio" name="task_prioridade" id="alta" value="1" checked required>
                             <label for="alta">
                                 Alta
                                 <img src="" alt="" class="checkedIcon border-icon">
                             </label>
                             
-                            <input type="radio" name="task_prioridade" id="media" value="media">
+                            <input type="radio" name="task_prioridade" id="media" value="2">
                             <label for="media">
                                 Média
                                 <img src="" alt="" class="checkedIcon border-icon">
                             </label>
                             
-                            <input type="radio" name="task_prioridade" id="baixa" value="baixa">
+                            <input type="radio" name="task_prioridade" id="baixa" value="3">
                             <label for="baixa">
                                 Baixa
                                 <img src="" alt="" class="checkedIcon border-icon">
@@ -159,8 +160,9 @@
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-<script src="components/scripts/interface.js"></script>
+<script src="components/scripts/storage.js"></script>
 <script src="components/scripts/tasks.js"></script>
 <script src="components/scripts/table.js"></script>
+<script src="components/scripts/interface.js"></script>
 
 </html>

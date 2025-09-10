@@ -343,7 +343,7 @@ body{
                             background-color: var(--red);
                         }
                         th.task-priority
-                        span.media{
+                        span.média{
                             background-color: var(--yellow);
                         }
                         th.task-priority

@@ -16,7 +16,7 @@ function submitForm(e){
     // Definindo valor das variáveis
     let name = iTaskName.value
     let category = document.querySelector("input[name='task_categoria']:checked").value
-    let priority = document.querySelector("input[name='task_prioridade']:checked").value
+    let priority = Number(document.querySelector("input[name='task_prioridade']:checked").value)
     let date = iTaskDate.value
 
     // Verificando se a data de conclusão da tarefa é anterior à data atual
@@ -33,12 +33,21 @@ function submitForm(e){
         return
     }
 
+
+    let dateDisplay = `${dateParts[2]} / ${dateParts[1] -1} / ${dateParts[0]}`
+    let priorityDisplay = 
+        priority === 1 ? 'alta'  : 
+        priority === 2 ? 'média' :
+        'baixa'
+
     // Criando Nova Tarefa
     let newTask = {
         nome: name,
         categoria: category,
+        prioridadeDisplay: priorityDisplay,
         prioridade: priority,
-        dataConclusao: date,
+        dataDisplay: dateDisplay,
+        data: taskDate,
     }
     tasks.push(newTask)
 
