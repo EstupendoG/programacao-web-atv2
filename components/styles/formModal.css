@@ -161,6 +161,12 @@ section#form-card{
     }
 }
 
+@keyframes fade-color {
+    to{
+        opacity: .5;
+    }
+}
+
 
 @keyframes giggle-wide {
     from, to{

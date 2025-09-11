@@ -27,17 +27,30 @@ function renderTable(tasks){
         array = filteredArray
     }
 
-    let taskHtmlCode = array.map( (task, index) => generateHtml(task, index) )
+    if (fSort === 'prioridade') {
+        array = array.sort((a, b) => a.prioridade - b.prioridade)
+    }
+    else
+    if (fSort === 'data') {
+        array = array.sort((a, b) => a.data - b.data)
+    }
 
-    tableBody.innerHTML = taskHtmlCode.join('\n')
+    let tasksTodo = array.filter((t) => t.finalizado === false)
+    let tasksDone = array.filter((t) => t.finalizado === true)
+
+    let tasksTodoHtml = tasksTodo.map( (task) => generateHtml(task, tasks.indexOf(task)) )
+    let tasksDoneHtml = tasksDone.map( (task) => generateHtml(task, tasks.indexOf(task)) )
+
+    tableBody.innerHTML =  tasksTodoHtml.join('\n')
+    tableBody.innerHTML += tasksDoneHtml.join('\n')
         
 }
 
 function generateHtml(t, i){
     let htmlCode = 
-        ` <tr>
+        ` <tr class="${t.finalizado === true ? 'task-done' : '' }">
             <th scope="row">
-                <input type="checkbox" id="task-done-input-${i}" class="task-done-input"> 
+                <input type="checkbox" id="task-done-input-${i}" class="task-done-input" onchange="changeTaskState(${i})" ${t.finalizado === true && ('checked')}>
                 <label for="task-done-input-${i}"></label>
             </th>
             <th class="task-name">

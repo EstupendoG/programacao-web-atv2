@@ -34,7 +34,7 @@ function submitForm(e){
     }
 
 
-    let dateDisplay = `${dateParts[2]} / ${dateParts[1] -1} / ${dateParts[0]}`
+    let dateDisplay = `${dateParts[2]} / ${dateParts[1]} / ${dateParts[0]}`
     let priorityDisplay = 
         priority === 1 ? 'alta'  : 
         priority === 2 ? 'média' :
@@ -48,6 +48,7 @@ function submitForm(e){
         prioridade: priority,
         dataDisplay: dateDisplay,
         data: taskDate,
+        finalizado: false,
     }
     tasks.push(newTask)
 
@@ -70,6 +71,14 @@ function deleteTask(index){
         // Renderizando Tabela
         renderTable(tasks)
     }
+}
 
+// ================================================================================= FINALIZANDO TAREFAS
+function changeTaskState(index) {
+    tasks[index].finalizado = !(tasks[index].finalizado)
+    console.log(tasks[index])
+    console.log(tasks[index].finalizado)
+    console.log(!(tasks[index].finalizado))
 
+    renderTable(tasks)
 }

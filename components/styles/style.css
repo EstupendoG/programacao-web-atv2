@@ -299,12 +299,23 @@ body{
                 }
                     :root[data-theme='light']
                     table#taskTable > tbody#taskBody tr:hover{
-                        filter: brightness(1.15);
+                        filter: brightness(1.05);
                     }
                     :root[data-theme='dark']
                     table#taskTable > tbody#taskBody tr:hover{
-                        filter: brightness(.8);
+                        filter: brightness(.95);
                     }
+                    table#taskTable > tbody#taskBody tr.task-done > th{
+                        font-weight: 200;
+                        color: rgb(var(--txtColor), 0.5 );
+                    }
+                        table#taskTable > tbody#taskBody tr.task-done th.task-name{
+                            text-decoration: line-through;
+                        }
+                        table#taskTable > tbody#taskBody tr.task-done th.task-priority span{
+                            background-color: rgb(var(--bgColor2));
+                            outline: 1px solid currentColor;
+                        }
                 table#taskTable > tbody#taskBody tr th:first-of-type,
                 table#taskTable > tbody#taskBody tr th:last-of-type{
                     text-align: center;
@@ -316,27 +327,29 @@ body{
                     font-weight: 400;
                     font-size: .9em;
                 }
-                    table#taskTable > tbody#taskBody tr th.task-priority span{
-                            width: 100%;
-                            display: inline-block;
-                            border-radius: 50px;
-                            text-align: center;
-                            padding: 3px;
-                    }
                     table#taskTable > tbody#taskBody tr th.task-name{
-                        min-width: 400px;
+                        max-width: 400px;
+                        width: 100%;
                         font-weight: 500;
                     }
                     table#taskTable > tbody#taskBody tr th.task-category{
                         text-transform: capitalize;
                         font-size: .9em;
                     }
-                    th.task-priority
+                    table#taskTable > tbody#taskBody tr th.task-priority
                     span{
-                        border: 1px solid rgb(var(--txtColor));
-                        text-transform: uppercase;
-                        font-family: var(--mainFont);
+                        width: 100%;
+                        padding: 3px;
+
                         font-size: .9em;
+                        font-family: var(--mainFont);
+                        text-align: center;
+                        text-transform: uppercase;
+
+                        display: inline-block;
+                        
+                        outline: 1px solid rgb(var(--txtColor));
+                        border-radius: 50px;
                     }
                         th.task-priority
                         span.alta{
@@ -378,8 +391,11 @@ body{
             filter: saturate(1);
             opacity: 1;
 
-            animation: pop-up 250ms ease-in;
+            animation: pop-up 250ms ease-in, fade-color 250ms 1s ease-out forwards;
         }
+            table#taskTable input.task-done-input:hover:checked + label{
+                opacity: 1 !important;
+            }
 
         table#taskTable img.delete-task-btn{
             width: 45px;
